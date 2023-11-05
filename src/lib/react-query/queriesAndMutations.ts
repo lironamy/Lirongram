@@ -69,8 +69,10 @@ export const useGetPosts = () => {
       const lastId = lastPage.documents[lastPage.documents.length - 1].$id;
       return lastId;
     },
+    initialPageParam: null, // Provide a suitable initial value here
   });
 };
+
 
 export const useSearchPosts = (searchTerm: string) => {
   return useQuery({
